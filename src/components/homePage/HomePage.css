@@ -1,0 +1,96 @@
+.hp-outer-box{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+}
+.hp-left-box, .hp-right-box{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.twitter-image{
+    width: 75%;
+}
+.hp-form-content{
+    width: 90%;
+    height: 80%;
+}
+.hp-hapenning-now{
+    font-size: 4.8vw;
+}
+.hp-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 30%;
+}
+.hp-join-today{
+    font-size: 2vw;
+}
+.hp-buttons{
+    height: 40%;
+}
+.hp-google{
+    display: flex;
+    padding-top: 3%;
+}
+.hp-google-button, .hp-apple-button, .hp-create-account, .hp-sign-in{
+    width: 40%;
+    height: 40px;
+    background-color: white;
+    border: none;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1vw;
+}
+.hp-sign-in{
+    border: 0.5px solid #8ba7bd;
+    background-color: black;
+    color: #1d9bf0;
+}
+.hp-create-account
+{
+    color: white;
+    background-color: #1a8cd8;
+    font-weight: 520;
+    font-size: 0.9vw;
+}
+.hp-or{
+    display: flex;
+    width: 42%;
+    justify-content: center;
+}
+.hp-google-logo, .hp-apple-logo{
+    width: 8%;
+    padding: 2%;
+}
+.hp-terms{
+    width: 40%;
+    font-size: 0.8vw;
+    color: #71767b;
+}
+.hp-bottom-span-text{
+    color: #0f9fff;
+    cursor: pointer;
+}
+.hp-already-account{
+    padding-top: 10%;
+    padding-left: 3%;
+    width: 90%;
+    height: 30%;
+}
+.hp-asking-text{
+    font-weight: 600;
+}
