@@ -1,0 +1,106 @@
+.sp-outer-box{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #242d34;
+}
+.sp-main-content{
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black ;
+    border-radius: 20px;
+}
+.sp-close{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.sp-close-button{
+    color: white;
+}
+.sp-form-content{
+    width: 70%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.sp-title{
+    color: white;
+    font-size: 2vw;
+}
+.sp-name-phone{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.sp-input{
+    width: 100%;
+    height: 43px;
+    border: 1px solid #777e85;
+    background-color: black;
+    color: white;
+    padding-left: 2%;
+    font-size: 1vw;
+}
+.sp-alink{
+    width: 92%;
+    text-align: right;
+}
+.sp-attribute{
+    text-decoration: none;
+    color: #1d9bf0;
+}
+.sp-dob-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+}
+.sp-dob-story{
+    text-align: start;
+    color: #767879;
+}
+.sp-next-button{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: start;
+    margin-top: 10%
+}
+.sp-date{
+    width: 95%;
+    height: 15%;
+    background-color: yellow;
+}
+.sp-button{
+    width: 92%;
+    height: 100%;
+    border: none;
+    font-size: 1vw;
+    border-radius: 30px;
+    background-color: #787a7a;
+}
+.sp-date-of-birth{
+    width: 98%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-start;
+}
+.sp-dob-input{
+    width: 93%;
+    height: 99%;
+    background-color: black;
+    color: #787a7a;
+    border: 1px solid #787a7a;
+    padding-left: 2%;
+}

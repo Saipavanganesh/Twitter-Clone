@@ -1,6 +1,8 @@
 .hp-outer-box{
     width: 100vw;
     height: 100vh;
+    /* background-color: white;
+    color: black; */
     background-color: black;
     color: white;
     display: flex;
@@ -71,6 +73,10 @@
     display: flex;
     width: 42%;
     justify-content: center;
+    align-items: center;
+}
+.hp-hr{
+    width: 40%;
 }
 .hp-google-logo, .hp-apple-logo{
     width: 8%;
@@ -80,17 +86,15 @@
     width: 40%;
     font-size: 0.8vw;
     color: #71767b;
+    text-align: left;
 }
 .hp-bottom-span-text{
     color: #0f9fff;
-    cursor: pointer;
+    text-decoration: none;
 }
 .hp-already-account{
     padding-top: 10%;
     padding-left: 3%;
     width: 90%;
     height: 30%;
-}
-.hp-asking-text{
-    font-weight: 600;
 }
