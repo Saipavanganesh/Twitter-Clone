@@ -1,120 +1,123 @@
-.lp-outer-box{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #242d34;
+.lp-outer-box {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.lp-main-content{
-    width: 40%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: black ;
-    border-radius: 20px;
+.lp-main-content {
+  width: 40vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  border-radius: 20px;
 }
-.lp-head{
-    display: flex;
-    height: 7%;
-    width: 100%;
+.lp-head {
+  display: flex;
+  height: 7%;
+  width: 100%;
 }
-.lp-close{
-    width: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.lp-close {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.lp-close-icon{
-    color: white;
+.lp-close-icon {
+  color: white;
 }
-.lp-logo{
-    display: flex;
-    justify-content: center;
-    width: 82%;
-    height: 80%;
-    padding: 2% 0;
+.lp-logo {
+  display: flex;
+  justify-content: center;
+  width: 82%;
+  height: 80%;
+  padding: 2% 0;
 }
-.lp-form{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 80%;
-    margin-top: 5%;
+.lp-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 80%;
+  margin-top: 5%;
 }
-.lp-title{
-    color: white;
-    width: 100%;
-    height: 13%;
-    font-size: 2.3vw;
-    font-weight: 500;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.lp-title {
+  color: white;
+  width: 100%;
+  height: 13%;
+  font-size: 2.3vw;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-.lp-buttons{
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.lp-buttons {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-.lp-google-button, .lp-apple-button{
-    width: 100%;
-    height: 40px;
-    background-color: white;
-    border: none;
-    border-radius: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin: 2%; */
-    cursor: pointer;
-    font-size: 1vw;
+.lp-google-button,
+.lp-apple-button {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  border: none;
+  border-radius: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1vw;
 }
-.lp-google-logo, .lp-apple-logo{
-    width: 8%;
-    padding: 2%;
+.lp-google-logo,
+.lp-apple-logo {
+  width: 8%;
+  padding: 2%;
 }
-.lp-google, .lp-apple{
-    display: flex;
-    padding-top: 3%;
+.lp-google,
+.lp-apple {
+  display: flex;
+  padding-top: 3%;
 }
-.lp-or{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    color: white;
+.lp-or {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
-.lp-hr{
-    width: 40%;
+.lp-hr {
+  width: 40%;
 }
-.lp-no-account{
-    color: #77787a;
-    text-align: left;
-    margin-top: 15%;
+.lp-no-account {
+  color: #77787a;
+  text-align: left;
+  margin-top: 15%;
 }
-.lp-forgot-password{
-    border: 1px solid #89a6ba ;
-    background-color: black;
-    color: white;
+.lp-forgot-password {
+  border: 1px solid #89a6ba;
+  background-color: black;
+  color: white;
 }
-.lp-text-field{
-    width: 100%;
-    height: 12%;
+.lp-input {
+  width: 100%;
+  background-color: yellow;
+  height: 43px;
+  border: 1px solid #777e85;
+  background-color: black;
+  padding-left: 2%;
+  font-size: 1vw;
 }
-.lp-input-field{
-    width: 99%;
-    height: 100%;
-    border-radius: 5px ;
-    background-color: black;
-    border: 1px solid #555a5f;
-    color: white;
-    font-size: 1.1vw;
-    padding-left: 3%;
+.lp-link {
+  color: #1a95e8;
+  text-decoration: none;
 }
-.lp-link{
-    color: #1a95e8;
-    text-decoration: none;
+.lp-email, .lp-password{
+    border: 1px solid rgb(119, 116, 116);
+    margin: 1%;
+    height: 20%;
 }

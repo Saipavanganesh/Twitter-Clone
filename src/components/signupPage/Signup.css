@@ -4,11 +4,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #242d34;
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
 }
 .sp-main-content{
-    width: 40%;
-    height: 90%;
+    width: 40vw;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,20 +36,25 @@
     color: white;
     font-size: 2vw;
 }
-.sp-name-phone{
+.sp-name-email{
     width: 90%;
-    height: 20%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+    /* border: 1px solid red; */
+}
+.sp-name, .sp-email, .sp-password, .sp-confirm-password{
+    border: 1px solid rgb(119, 116, 116);
+    margin-top: 1%;
+    height: 20%;
 }
 .sp-input{
     width: 100%;
+    background-color: yellow;
     height: 43px;
     border: 1px solid #777e85;
     background-color: black;
-    color: white;
     padding-left: 2%;
     font-size: 1vw;
 }
@@ -75,7 +81,7 @@
     height: 10%;
     display: flex;
     justify-content: start;
-    margin-top: 10%
+    margin-top: 10%;
 }
 .sp-date{
     width: 95%;
@@ -89,6 +95,7 @@
     font-size: 1vw;
     border-radius: 30px;
     background-color: #787a7a;
+    cursor: pointer;
 }
 .sp-date-of-birth{
     width: 98%;

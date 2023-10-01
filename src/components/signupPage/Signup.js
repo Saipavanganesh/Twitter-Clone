@@ -1,28 +1,65 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./Signup.css";
 import CloseIcon from "@mui/icons-material/CloseOutlined";
-import { IconButton } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { IconButton, TextField } from "@mui/material";
 
-function Signup() {
-    const [data, setData] = useState({
-        name: "",
-        phone: "",
-    })
-    let Navigate = useNavigate();
-    const handleCloseClick = () => {
-        Navigate("/")
-    }
-    let name,value;
-    const handleSignupChange = (event) => {
-        name = event.target.name;
-        value = event.target.value
-        setData({...data, [name]:value })   
-        localStorage.setItem(name,value)
-    }   
-    const handleSignupNext = () => {
-        console.log(data)
-    }
+function Signup({ setShowSignup }) {
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const nameRegex = /^[a-zA-Z\s\-']+$/;
+  const passwordRegex = /^.*(?=.{8,})(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).*$/;
+  const emailRegex = /^[a-z]{3,}(.[0-9a-z]*)?@([a-z]){2,}.[a-z]+(.in)*$/;
+
+  const [errors, setErrors] = useState({
+    firstNameError: false,
+    firstNameHelper: "",
+    lastNameError: false,
+    lastNameHelper: "",
+    emailError: false,
+    emailHelper: "",
+    passwordError: false,
+    passwordHelper: "",
+    confirmPasswordError: false,
+    confirmPasswordHelper: "",
+  });
+
+  const handleCloseClick = () => {
+    setShowSignup(false);
+  };
+  let name, value;
+  const handleSignupChange = (event) => {
+    name = event.target.name;
+    value = event.target.value;
+    setData({ ...data, [name]: value });
+  };
+
+  //Handling validation
+  const handleSignupNext = () => {
+    let nameTest = nameRegex.test(data.name);
+    let emailTest = emailRegex.test(data.email);
+    let passwordTest = passwordRegex.test(data.password);
+
+    setErrors((prevstate) => ({
+      ...prevstate,
+      nameError: !nameTest,
+      nameHelper: nameTest ? "" : "Enter correct name",
+
+      emailError: !emailTest,
+      emailHelper: emailTest ? "" : "Enter correct Email",
+
+      passwordError: !passwordTest,
+      passwordHelper: passwordTest ? "" : "Enter correct Password",
+
+      confirmPasswordError: data.password !== data.confirmPassword,
+      confirmPasswordHelper:
+        data.password !== data.confirmPassword ? "Passwords don't match" : "",
+    }));
+  };
   return (
     <div className="sp-outer-box">
       <div className="sp-main-content">
@@ -35,29 +72,86 @@ function Signup() {
           <div className="sp-title">
             <b>Create your account</b>
           </div>
-          <div className="sp-name-phone">
+          <div className="sp-name-email">
             <div className="sp-name">
-                <input className="sp-input" type="text" name="name" placeholder="Name" onChange={handleSignupChange}/>
+              <TextField
+                className="sp-input"
+                name="name"
+                label="Name"
+                variant="outlined"
+                InputProps={{style:{color:"white"}}}
+                InputLabelProps={{style:{color:"gray"}}}
+                onChange={handleSignupChange}
+                value={data.name}
+                error={errors.nameError}
+                helperText={errors.nameHelper}
+              />
             </div>
-            <div className="sp-phone">
-                <input className="sp-input" type="text" name="phone" placeholder="Phone" onChange={handleSignupChange}/>
+            <div className="sp-email">
+              <TextField
+                className="sp-input"
+                name="email"
+                label="Email"
+                variant="outlined"
+                InputProps={{style:{color:"white"}}}
+                InputLabelProps={{style:{color:"gray"}}}
+                onChange={handleSignupChange}
+                value={data.email}
+                error={errors.emailError}
+                helperText={errors.emailHelper}
+              />
+            </div>
+            <div className="sp-password">
+              <TextField
+                className="sp-input"
+                type="password"
+                name="password"
+                label="Password"
+                InputProps={{style:{color:"white"}}}
+                InputLabelProps={{style:{color:"gray"}}}
+                onChange={handleSignupChange}
+                value={data.password}
+                error={errors.passwordError}
+                helperText={errors.passwordHelper}
+              />
+            </div>
+            <div className="sp-confirm-password">
+              <TextField
+                className="sp-input"
+                type="password"
+                name="confirmPassword"
+                label="Confirm Password"
+                InputProps={{style:{color:"white"}}}
+                InputLabelProps={{style:{color:"gray"}}}
+                onChange={handleSignupChange}
+                error={errors.confirmPasswordError}
+                helperText={errors.confirmPasswordHelper}
+              />
             </div>
           </div>
-            <div className="sp-alink">
-                <a className="sp-attribute" href="">Use email instead</a>
+
+          <div className="sp-dob-text">
+            <div className="sp-dob-title">
+              <b>Date of birth</b>
             </div>
-            <div className="sp-dob-text">
-                <div className="sp-dob-title"><b>Date of birth</b></div>
-                <div className="sp-dob-story">
-                This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.
-                </div>
+            <div className="sp-dob-story">
+              This will not be shown publicly. Confirm your own age, even if
+              this account is for a business, a pet, or something else.
             </div>
-            <div className="sp-date-of-birth">
-                <input type="date" className="sp-dob-input" name="dob" onChange={handleSignupChange}/>
-            </div>
-            <div className="sp-next-button">
-                <button className="sp-button" onClick={handleSignupNext}><b>Next</b></button>
-            </div>
+          </div>
+          <div className="sp-date-of-birth">
+            <input
+              type="date"
+              className="sp-dob-input"
+              name="dob"
+              onChange={handleSignupChange}
+            />
+          </div>
+          <div className="sp-next-button">
+            <button className="sp-button" onClick={handleSignupNext}>
+              <b>Next</b>
+            </button>
+          </div>
         </div>
       </div>
     </div>
