@@ -1,0 +1,94 @@
+.db-outer-box{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+.db-drawer{
+    width: 26.5%;
+    height: 73%;
+    background-color: black;
+}
+.db-x-icon{
+    width: 80%;
+}
+.db-page-logo{
+    padding-top:2%;
+    width: 10%;
+}
+.db-common-box{
+    float: right;
+    width: 70%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+.db-field-icon, .db-field-title{
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.db-field-title{
+    width: 75%;
+    font-size: 1.3vw;
+    font-weight: 600;
+    justify-content: flex-start;
+    align-items: center;
+}
+.db-twitter-image{
+    width: 5%;
+}
+.db-icon-div{
+    width: 20%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+.db-post-button{
+    width: 65%;
+    display: flex;
+    justify-content: flex-start;
+}
+.db-button{
+    height: 100%;
+    width: 90%;
+    border-radius: 35px;
+    background-color: #1a8cd8;
+    color: white;
+    font-size: 1vw;
+    border: none;
+    cursor: pointer;
+}
+.db-bottom-profile{
+    width: 25%;
+    height: 18%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.db-profile-pic{
+    width: 15%;
+    height: 30%;
+}
+.db-profile-details{
+    width: 40%;
+    height: 30%;
+    color: white;
+}
+.db-profile-more{
+    width: 8%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.db-twitter-id{
+    color: gray;
+}
+.db-profile-more-icon{
+    color: white;
+}

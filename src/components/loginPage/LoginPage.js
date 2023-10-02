@@ -5,7 +5,8 @@ import googleLogo from "../images/google-logo.png";
 import appleLogo from "../images/apple-logo.png";
 import CloseIcon from "@mui/icons-material/CloseOutlined";
 import { IconButton, TextField } from "@mui/material";
-
+import { signIn } from "../../services/UserServices";
+import { useNavigate } from "react-router-dom";
 function LoginPage({ setShowLogin }) {
   const [loginData, setLoginData] = useState({
     email: "",
@@ -33,7 +34,8 @@ function LoginPage({ setShowLogin }) {
   };
 
   //Handling Validation
-  const handleLoginNext = () => {
+  let Navigate = useNavigate();
+  const handleLoginNext = async () => {
     let logEmailTest = logEmailRegex.test(loginData.email);
     let logPasswordTest = passwordRegex.test(loginData.password);
 
@@ -46,6 +48,12 @@ function LoginPage({ setShowLogin }) {
       logPasswordHelper: logPasswordTest ? "" : "Enter correct Password",
     }));
     console.log(loginData);
+    if(logEmailTest === true && logPasswordTest === true){
+        let response = await signIn(loginData);
+        console.log(response);
+        localStorage.setItem("token", response.data.data);
+        Navigate("/dashboard");
+      }
   };
   return (
     <div className="lp-outer-box">

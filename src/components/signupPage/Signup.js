@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Signup.css";
 import CloseIcon from "@mui/icons-material/CloseOutlined";
 import { IconButton, TextField } from "@mui/material";
+import { signUp } from "../../services/UserServices";
 
 function Signup({ setShowSignup }) {
   const [data, setData] = useState({
@@ -39,7 +40,7 @@ function Signup({ setShowSignup }) {
   };
 
   //Handling validation
-  const handleSignupNext = () => {
+  const handleSignupNext = async () => {
     let nameTest = nameRegex.test(data.name);
     let emailTest = emailRegex.test(data.email);
     let passwordTest = passwordRegex.test(data.password);
@@ -59,6 +60,12 @@ function Signup({ setShowSignup }) {
       confirmPasswordHelper:
         data.password !== data.confirmPassword ? "Passwords don't match" : "",
     }));
+    
+    if(nameTest === true && emailTest === true && passwordTest === true){
+    let response = await signUp(data);
+      console.log(response);
+      localStorage.setItem("token", response.data.data.userId);
+    }
   };
   return (
     <div className="sp-outer-box">
