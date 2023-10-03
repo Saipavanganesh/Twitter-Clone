@@ -1,0 +1,116 @@
+.mc-outer-component {
+  width: 40vw;
+  height: 100vh;
+  background-color: black;
+  border-right: 0.5px solid gray;
+  border-left: 0.5px solid gray;
+}
+.mc-home {
+  height: 15%;
+  color: white;
+}
+.mc-home-title {
+  text-align: left;
+  padding: 2% 0 0 2%;
+  font-size: 1.4vw;
+}
+.mc-for-following {
+  display: flex;
+  padding-bottom: 2%;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 55%;
+  border-bottom: 1px solid gray;
+}
+.mc-whats-happening {
+  display: flex;
+  height: 17%;
+  padding-bottom: 1%;
+  border-bottom: 1px solid gray;
+}
+.mc-profile {
+  height: 80%;
+  width: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.mc-wh-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.mc-happening-text {
+  font-size: 1.4vw;
+  color: gray;
+  height: 50%;
+  display: flex;
+  align-items: flex-end;
+}
+.mc-bottom {
+  display: flex;
+  width: 100%;
+  height: 40%;
+}
+.mc-icons {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.mc-icon-color {
+  color: #1d9bf0;
+}
+.mc-post-button {
+  width: 55%;
+  height: 140%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.mc-post {
+  height: 60%;
+  width: 25%;
+  background-color: #1a8cd8;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  font-size: 1vw;
+}
+.mc-account-name {
+  color: white;
+}
+.mc-gray-text{
+  color: gray;
+}
+.mc-details {
+  display: flex;
+}
+.mc-accout-details{
+    padding-top: 2%;
+}
+.mc-main-tweet{
+    width: 100%;
+    height: 50%;
+}
+.mc-image{
+    width: 100%;
+    height: 100%;
+}
+.mc-tweet-options{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.mc-tweet{
+    color:white;
+    text-align: right;
+    width: 30%;
+}
+.mc-tweet-image{
+    width: 98%;
+    padding-top: 2%;
+}

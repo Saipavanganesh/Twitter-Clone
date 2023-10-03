@@ -1,0 +1,95 @@
+.lc-outer-box{
+    width: 26.5vw;
+    height: 100vh;
+    background-color: black;
+}
+.lc-drawer{
+    width: 100%;
+    height: 73%;
+    background-color: black;
+}
+.lc-x-icon{
+    width: 80%;
+}
+.lc-page-logo{
+    padding-top:2%;
+    width: 10%;
+}
+.lc-common-box{
+    float: right;
+    width: 70%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+.lc-field-icon, .lc-field-title{
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lc-field-title{
+    width: 75%;
+    font-size: 1.3vw;
+    font-weight: 600;
+    justify-content: flex-start;
+    align-items: center;
+}
+.lc-twitter-image{
+    width: 5%;
+}
+.lc-icon-div{
+    width: 20%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+.lc-post-button{
+    width: 65%;
+    display: flex;
+    justify-content: flex-start;
+}
+.lc-button{
+    height: 100%;
+    width: 90%;
+    border-radius: 35px;
+    background-color: #1a8cd8;
+    color: white;
+    font-size: 1vw;
+    border: none;
+    cursor: pointer;
+}
+.lc-bottom-profile{
+    width: 98%;
+    height: 15%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    cursor: pointer;
+}
+.lc-profile-pic{
+    width: 15%;
+    height: 30%;
+}
+.lc-profile-details{
+    width: 40%;
+    height: 30%;
+    color: white;
+}
+.lc-profile-more{
+    width: 8%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.lc-twitter-id{
+    color: gray;
+}
+.lc-profile-more-icon{
+    color: white;
+}
